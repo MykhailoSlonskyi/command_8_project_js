@@ -1,0 +1,162 @@
+.location {
+  width: 100%;
+  padding: 64px 0;
+  background-color: #fceee6;
+  color: #0b0500;
+  font-family: var(--font-family-base);
+}
+
+.location *,
+.location *::before,
+.location *::after {
+  box-sizing: border-box;
+}
+
+.location__container {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.location__content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.location__info {
+  width: 100%;
+  min-width: 0;
+}
+
+.location__label {
+  margin: 0 0 16px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.location__title {
+  margin: 0 0 24px;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.location__description {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.location__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+}
+
+.location__contact {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.location__icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.location__contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.location__contact-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.location__link {
+  display: inline-block;
+  color: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+
+.location__link:hover,
+.location__link:focus-visible {
+  color: #a44f1e;
+}
+
+.location__address {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.location__map-wrapper {
+  width: 100%;
+  height: 395px;
+  margin-top: 32px;
+  overflow: hidden;
+}
+
+.location__map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(100%);
+}
+
+@media screen and (min-width: 768px) {
+  .location__container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+
+  .location__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 32px;
+    align-items: start;
+  }
+
+  .location__map-wrapper {
+    height: 395px;
+    margin-top: 80px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .location__container {
+    max-width: 1440px;
+    padding: 0 64px;
+  }
+
+  .location__content {
+    grid-template-columns: minmax(0, 732px) minmax(0, 500px);
+    column-gap: 80px;
+  }
+
+  .location__map-wrapper {
+    height: 738px;
+    margin-top: 80px;
+  }
+}
